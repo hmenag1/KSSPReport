@@ -1,0 +1,10 @@
+#### Workbench for KSSPReport ####
+library(usethis)
+usethis::use_git_ignore("data-raw")
+
+#### GIT commands to copy files from master to restructure_hm branch ####
+# from: https://stackoverflow.com/questions/17416691/how-can-i-copy-files-from-a-branch-to-another-using-git
+# git checkout restructure_hm
+# git checkout master foo
+# git commit -m 'Add file foo to restructure_hm.'
+
