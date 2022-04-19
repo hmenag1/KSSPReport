@@ -146,7 +146,7 @@ write_facility_it <- function (username, password, table, mft, start, end, facil
       nrow1 = length(overall$Field)
       
       for (i in 1:nrow1) {
-        
+        overall$Warning <- NA
         if (is.na(overall$Percent_Valid[i]) & is.na(overall$Percent_Complete[i])) {
           
           overall$Warning[i] = "Warning: Percent Complete and Percent Valid Missing"

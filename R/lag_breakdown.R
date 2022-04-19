@@ -23,7 +23,9 @@ lag_breakdown<-function(data){
     count(Timeliness=category_Arrival_Visit)%>%
     mutate(prop_Arrival_Visit = round(prop.table(n)*100),1) %>%
     select(-n) %>%
-    complete(C_Biosense_Facility_ID,Timeliness,fill = list(prop_Arrival_Visit = 0))
+    complete(., Timeliness, fill = list(prop_Arrival_Visit = 0))
+  
+  # complete(C_Biosense_Facility_ID,Timeliness,fill = list(prop_Arrival_Visit = 0)) previous version 20220419
 
   
   return(Lag_Summary)
